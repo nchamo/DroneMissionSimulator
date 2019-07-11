@@ -22,7 +22,7 @@ If you happen to do so, please create a Pull Request so we can merge it.
 
 ## Running
 When openning the proyect, you might see some errors:
-1.PNG
+![Errors](https://user-images.githubusercontent.com/15222168/61068348-2e854b00-a3e0-11e9-935e-25b601edf45e.PNG)
 That's ok, it's because some files were not added to the repo in order to reduce the size. Those files will be auto-generated, so don't worry.
 
 ### Simulation
@@ -31,7 +31,7 @@ It might look like the simulation 'has lag'. This can happen if the flight speed
 
 #### Flight Parameters
 To modify the mission's parameters, you must first select the camera on the `Hierarchy` menu, and then you will be able to adjust your flight plan on the `Inspector` on the right.
-2.PNG
+![Steps](https://user-images.githubusercontent.com/15222168/61068352-30e7a500-a3e0-11e9-963f-241b11f5ab1f.PNG)
 
 ##### Debug
 If you just want to check the mission plan, without actually generating the images, you can uncheck the parameter "Take Screeenshots". This will also remove any lag you might have.
@@ -43,10 +43,10 @@ If this process is ongoing, you can just wait a few seconds for the process to r
 
 ### Elevation Map
 To generate the elevation map, you can go to `Window > Elevation Map`.
-3.PNG
+![Window](https://user-images.githubusercontent.com/15222168/61068355-3349ff00-a3e0-11e9-8386-1ee891e5140a.PNG)
 
 You will be able to determine the size and the quality of the map.
-4.PNG 
+![Options](https://user-images.githubusercontent.com/15222168/61068359-37761c80-a3e0-11e9-975d-4c93ae77c7f3.PNG)
 
 ## Terrain
 If you want to modify the terrain that already comes with the project, you can easily add/remove elevation, trees, grass, water, etc. Check the [documentation](https://docs.unity3d.com/Manual/script-Terrain.html) on how to do so.
