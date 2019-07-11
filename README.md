@@ -46,6 +46,7 @@ To generate the elevation map, you can go to `Window > Elevation Map`.
 ![Window](https://user-images.githubusercontent.com/15222168/61068355-3349ff00-a3e0-11e9-8386-1ee891e5140a.PNG)
 
 You will be able to determine the size and the quality of the map.
+
 ![Options](https://user-images.githubusercontent.com/15222168/61068359-37761c80-a3e0-11e9-975d-4c93ae77c7f3.PNG)
 
 ## Terrain
