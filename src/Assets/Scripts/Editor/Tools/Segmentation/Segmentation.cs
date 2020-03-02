@@ -43,10 +43,10 @@ public class Segmentation : Task<CastingResult, Void> {
                 RaycastResult result = castingResult[row, col];
                 if (result == null) {
                     image.SetPixel(col, row, noHitColor);
-                    array[col, row] = -1;
+                    array[image.height - 1 - row, col] = -1;
                 } else {
                     image.SetPixel(col, row, colors[result.entityType]);
-                    array[col, row] = (int) result.entityType;
+                    array[image.height - 1 - row, col] = (int) result.entityType;
                 }
             }
         }

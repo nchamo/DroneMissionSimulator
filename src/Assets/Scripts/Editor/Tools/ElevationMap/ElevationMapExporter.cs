@@ -9,14 +9,12 @@ public class ElevationMapExporter : Task<ElevationMap, Void> {
 
 
     private readonly float GSD;
-    private readonly bool exportCells;
     private readonly string folderPath;
     private ElevationMap elevationMap;
     private int step = 0;
 
-    public ElevationMapExporter(float GSD, bool exportArray, string folderPath) {
+    public ElevationMapExporter(float GSD, string folderPath) {
         this.GSD = GSD;
-        this.exportCells = exportArray;
         this.folderPath = folderPath;
     }
 
@@ -70,9 +68,6 @@ public class ElevationMapExporter : Task<ElevationMap, Void> {
             writer.WriteStartDocument();
             writer.WriteStartElement("ElevationMap");
             WriteProperties(writer);
-            if (exportCells) {
-                WriteCellsInNumpyFormat(writer, elevationMap);
-            }
             writer.WriteEndElement();
             writer.WriteEndDocument();
         }
@@ -87,20 +82,6 @@ public class ElevationMapExporter : Task<ElevationMap, Void> {
         writer.WriteElementString("MinElevation", elevationMap.MinElevation.ToString());
         writer.WriteElementString("NoValue", elevationMap.NO_VALUE.ToString());
         writer.WriteEndElement();
-    }
-
-    private void WriteCellsInNumpyFormat(XmlWriter writer, ElevationMap elevationMap) {
-        string[] rows = new string[elevationMap.Height];
-        for (int i = 0; i < elevationMap.Height; i++) {
-            float[] columns = new float[elevationMap.Width];
-            for (int j = 0; j < elevationMap.Width; j++) {
-                columns[j] = elevationMap[i, j];
-            }
-            rows[i] = string.Join(",", columns);
-        }
-        writer.WriteStartElement("Map");
-        writer.WriteElementString("ArrayInNumpyFormat", string.Join("\n", rows));
-        writer.WriteEndElement();
-    }
+    }    
 
 }
