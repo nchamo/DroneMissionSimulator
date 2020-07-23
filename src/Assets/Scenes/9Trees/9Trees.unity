@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18346101, g: 0.22903684, b: 0.30586618, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1592,13 +1592,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b202fb08929fe484e85c588910352234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   surveyAreaConfiguration:
-    objectOfInterest: {fileID: 0}
+    objectOfInterest: {fileID: 1087850528}
     areaWidth: 100
     areaDistance: 100
     frontalOverlap: 85
@@ -1611,7 +1611,7 @@ MonoBehaviour:
     resolutionY: 3000
   flightSpecsConfiguration:
     speed: 50
-    missionType: 0
+    missionType: 1
     cameraAngle1: 90
     altitude1: 100
     cameraAngle2: 90
@@ -1624,7 +1624,7 @@ MonoBehaviour:
     dilutionOfPrecision: 1
     noise: 0
     noiseRandomSeed: 0
-  folderPath: Images/9Trees/Overlap/DeepDive2/Frontal95Lateral92
+  folderPath: Images/Demo
   drawGrid: 1
 --- !u!114 &963194230
 MonoBehaviour:
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 015f997f94d1db644aa240b26888e1b3, type: 3}
   m_Name: 
