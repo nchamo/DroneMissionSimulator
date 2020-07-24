@@ -61,11 +61,19 @@ public class SerializedDroneFlight {
     public class SerializedFlightPlan {
 
         public Mission.MissionType missionType;
+        public string distanceCovered;
         public List<SerializedWaypoints> waypoints;
 
         public SerializedFlightPlan(Mission.FlightPlan flightPlan) {
             this.waypoints = flightPlan.waypoints.Select(waypoint => new SerializedWaypoints(waypoint)).ToList();
             this.missionType = flightPlan.missionType;
+
+            double distanceCovered = 0;
+            Vector3[] positions = flightPlan.waypoints.Select(waypoint => waypoint.dronePosition).ToArray();
+            for (int i = 1; i < positions.Length; i++) {
+                distanceCovered += Vector3.Distance(positions[i - 1], positions[i]);
+            }
+            this.distanceCovered = Math.Round(distanceCovered, 2) + "m";
         }
 
         public SerializedFlightPlan() { }
