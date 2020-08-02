@@ -51,7 +51,8 @@ The proyect already has some trees downloaded from the [Unity Asset Store](https
 ## What's coming in the future?
 There are a few improvement to be made, starting with:
 1. Making the simulator cross platform.
-2. Building the project so that it is not necessary to install Unity. 
+2. Building the project so that it is not necessary to install Unity.
+3. Fix problem with numeric formats where commas and dots are switched.
 
 ### Contributing 
 If you happen to tackle any of the issue above, or any others, please send a PR our way and we will be more than happy to merge them!

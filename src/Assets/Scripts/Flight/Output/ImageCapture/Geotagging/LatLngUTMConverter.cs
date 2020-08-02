@@ -1,9 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System;
 
 public class LatLngUTMConverter {
 
@@ -12,7 +7,7 @@ public class LatLngUTMConverter {
         public double Lng { get; set; }
     }
 
-    public static LatLng ConvertUtmToLatLng(double UTMEasting, double UTMNorthing, int UTMZoneNumber, String UTMZoneLetter) {
+    public static LatLng ConvertUtmToLatLng(double UTMEasting, double UTMNorthing, int UTMZoneNumber, string UTMZoneLetter) {
         // These are set according to WGS84
         double a = 6378137;
         double eccSquared = 0.00669438;

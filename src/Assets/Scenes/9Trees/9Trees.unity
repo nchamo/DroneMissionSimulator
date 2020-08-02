@@ -1624,7 +1624,7 @@ MonoBehaviour:
     dilutionOfPrecision: 1
     noise: 0
     noiseRandomSeed: 0
-  folderPath: Images/Demo
+  folderPath: Images
   drawGrid: 1
 --- !u!114 &963194230
 MonoBehaviour:
