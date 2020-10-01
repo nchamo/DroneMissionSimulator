@@ -13,6 +13,9 @@ public class ConfigurableSurveyArea {
     [Tooltip("Distance of the area that we want to cover around the point of interest (meters)")]
     public int areaDistance = 200;
 
+    [Tooltip("Determine if you want to map the center of the object of interest, or the 0,0")]
+    public bool useCoordinateOrigin = false;
+
     [Tooltip("Percentage of overlap between images in the same pass (percentage)")]
     [Range(0, 100)]
     public int frontalOverlap = 85;
@@ -36,6 +39,7 @@ public class ConfigurableSurveyArea {
             objectsBounds = new Bounds(objectOfInterest.transform.position, objectOfInterest.transform.localScale);
         }
 
-        return new Bounds(objectsBounds.center, new Vector3(areaWidth, objectsBounds.size.y, areaDistance));
+        Vector3 center = useCoordinateOrigin ? Vector3.zero : objectsBounds.center;
+        return new Bounds(center, new Vector3(areaWidth, objectsBounds.size.y, areaDistance));
     }
 }
