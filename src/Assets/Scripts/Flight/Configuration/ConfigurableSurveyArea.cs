@@ -39,7 +39,7 @@ public class ConfigurableSurveyArea {
             objectsBounds = new Bounds(objectOfInterest.transform.position, objectOfInterest.transform.localScale);
         }
 
-        Vector3 center = useCoordinateOrigin ? Vector3.zero : objectsBounds.center;
+        Vector3 center = useCoordinateOrigin ? new Vector3(0, objectsBounds.center.y, 0) : objectsBounds.center;
         return new Bounds(center, new Vector3(areaWidth, objectsBounds.size.y, areaDistance));
     }
 }

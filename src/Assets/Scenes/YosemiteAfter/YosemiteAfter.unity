@@ -1184,6 +1184,7 @@ MonoBehaviour:
     objectOfInterest: {fileID: 521789784}
     areaWidth: 200
     areaDistance: 200
+    useCoordinateOrigin: 1
     frontalOverlap: 90
     sideOverlap: 80
   cameraDefinitionConfiguration:
@@ -1302,6 +1303,7 @@ MonoBehaviour:
     objectOfInterest: {fileID: 521789784}
     areaWidth: 100
     areaDistance: 100
+    useCoordinateOrigin: 1
     frontalOverlap: 90
     sideOverlap: 80
   cameraDefinitionConfiguration:
